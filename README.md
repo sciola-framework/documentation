@@ -1,2 +1,2 @@
-# documentation
+# Documentation
 Sciola Framework Documentation.
