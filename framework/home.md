@@ -42,7 +42,7 @@
 
 <br>
 
-> <a href="#-config"><img src="https://github.com/sciola-git/sciola-git.github.io/blob/main/images/icons/folder.svg?raw=true" width="48px" align="center" /></a> [config](#-config)
+> <a href="/doc/#config"><img src="https://github.com/sciola-git/sciola-git.github.io/blob/main/images/icons/folder.svg?raw=true" width="48px" align="center" /></a> [config](#-config)
 >
 > <a href="#-database"><img src="https://github.com/sciola-git/sciola-git.github.io/blob/main/images/icons/folder.svg?raw=true" width="48px" align="center" /></a> [database](#-database)
 >
