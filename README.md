@@ -4,4 +4,4 @@
 
 ## <div align="center">[Documentation](https://sciola-framework.github.io/#doc)</div>
 
-<p align="center">Sciola Framework provides a variety of features for building apps.</p>
+<p align="center">The Sciola Framework provides a variety of features for building applications.</p>
