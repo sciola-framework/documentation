@@ -4,4 +4,4 @@
 
 ## <div align="center">[Documentation](https://sciola-framework.github.io/#doc)</div>
 
-<p align="center">Documentation of native features.</p>
+<p align="center">Documentation of the native features of the Sciola Framework.</p>
