@@ -5,19 +5,21 @@
     <i class="fa fa-arrow-left" aria-hidden="true"></i>
   </a>
 </div>
-<pre class="text-start">
+<pre>
 In this directory are the application's configuration files.
 
 File: sciola.ini
 
 Note: In production change the [ DEV_MODE ] option to false.
+</pre>
+<pre class="text-start">
+<code class="language-php">
+<?php
+$DEV_MODE = true;
 
-<code class="language-html">
-DEV_MODE = true
+//to
 
-to
-
-DEV_MODE = false
+$DEV_MODE = false;
 
 </code>
 </pre>
