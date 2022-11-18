@@ -8,36 +8,37 @@
 
 <p class="start">In this directory are the translation files of your application and the routes.</p>
 
-> **Note**
->
-> *- Translation files must have the following structure: {"ID" : "Term"}*
->
-> *- The translated text must have the same ID in all translation files. Example:*
+<div class="alert alert-primary text-wrap text-start p-4" role="alert">
+  <h5><i class="fa-solid fa-circle-info me-2"></i><strong>Note</strong></h5>
+  <p class="m-0 p-0">- Translation files must have the following structure: {"ID" : "Term"}</p>
+  <p class="m-0 p-0">- The translated text must have the same ID in all translation files. Example:</p>
+</div>
 
+<h4>Text translation</h4>
 
-### Text translation
-
-File: **en/app.json**
-
-```json
+<pre class="text-start">
+File: en/app.json
+<code class="language-javascript">
 {
   "A0001" : "Hello World!",
   "A0002" : "Welcome",
   "A0003" : ""
 }
-```
+</code>
+</pre>
 
-File: **pt-BR/app.json**
-
-```json
+<pre class="text-start">
+File: pt-BR/app.json
+<code class="language-javascript">
 {
   "A0001" : "Olá Mundo!",
   "A0002" : "Bem-vindo",
   "A0003" : ""
 }
-```
+</code>
+</pre>
 
-### Route translation
+<h4>Route translation</h4>
 
 File: **en/routes.json**
 
