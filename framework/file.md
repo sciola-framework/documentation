@@ -9,18 +9,6 @@ Develop, run, store and access Twig code online - https://twigfiddle.com
 
 <p>
 
-### <a href="#-database"><img src="https://github.com/sciola-git/sciola-git.github.io/blob/main/images/icons/folder.svg?raw=true" width="60px" align="center" /></a> database
-
-</p>
-
-In this directory are the database development files used by the ORM (Object-Relational Mapping).
-
-##
-
-##
-
-<p>
-
 ### <a href="#-languages"><img src="https://github.com/sciola-git/sciola-git.github.io/blob/main/images/icons/folder.svg?raw=true" width="60px" align="center" /></a> languages
 
 </p>
