@@ -8,6 +8,85 @@
 
 <p class="text-start">In this directory are the layers of the MVC pattern. [ Model | View | Controller ]</p>
 
-<img class="img-fluid" src="https://raw.githubusercontent.com/sciola-framework/sciola-framework.github.io/main/images/screenshots/mvc.png">
+<img class="img-fluid" src="https://raw.githubusercontent.com/sciola-framework/sciola-framework.github.io/main/images/screenshots/mvc.png" width="360px">
 
 <h2 class="text-start">Controller</h2>
+
+<pre class="text-start">
+File: MyController.php
+<code class="language-php">
+&lt;?php
+
+namespace Layers\Controllers;
+
+use Sciola\Controller;
+
+class MyController extends Controller
+{
+    public function foo()
+    {
+        $model = model('MyModel');
+        $data['foo'] = $model->foo();
+        return view('my-view', $data);
+    }
+}
+</code>
+</pre>
+
+<h2 class="text-start">Model</h2>
+
+<pre class="text-start">
+File: MyModel.php
+<code class="language-php">
+&lt;?php
+
+namespace Layers\Models;
+
+use Sciola\Model;
+
+class MyModel extends Model
+{
+    private $pdo = null;
+    //private $orm = null;
+
+    public function __construct()
+    {
+        $this->pdo = $this->pdo();
+        //$this->orm = $this->orm();
+    }
+
+    public function foo()
+    {
+        return 'Hello World';
+    }
+}
+</code>
+</pre>
+
+<h2 class="text-start">View</h2>
+
+<pre class="text-start">
+File: my-view.html
+<code class="language-twig">
+{% include header with {
+    meta: {
+      title: '',
+      subject: '',
+      description: '',
+      keywords: ''
+    },
+    css : ['/packages/foo-1/style.min.css',
+           '/packages/foo-2/style.min.css',
+           '/packages/foo-3/style.min.css']
+  }
+%}
+
+&lt;h1>Page content {{ foo }}&lt;/h1>
+
+{% include footer with {
+    js : ['/packages/foo-1/script.min.js',
+          '/packages/foo-2/script.min.js']
+  }
+%}
+</code>
+</pre>
