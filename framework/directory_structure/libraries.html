@@ -5,3 +5,62 @@
     <i class="fa fa-arrow-left" aria-hidden="true"></i>
   </a>
 </div>
+
+<h5 class="py-4">In this directory are the libraries of your application.</h5>
+
+<p class="text-start">You can create your classes in this directory and call them anywhere in your application. Example:</p>
+
+<pre class="text-start">
+File: Foo.php
+<code class="language-php">
+&lt;?php
+
+namespace Lib;
+
+class Foo
+{
+    public function bar()
+    {
+        return 1;
+    }
+}
+</code>
+</pre>
+
+<p class="text-start">Now just instantiate the class in the controller, model or other library. Example:</p>
+
+<pre class="text-start">
+<code class="language-php">
+&lt;?php
+
+use Lib\Foo;
+
+class MyController extends Controller
+{
+    public function demo()
+    {
+        $Foo = new Foo;
+        echo $Foo->bar(); // 1
+    }
+}
+</code>
+</pre>
+
+<p class="text-start">or</p>
+
+<pre class="text-start">
+<code class="language-php">
+&lt;?php
+
+use Lib\Foo;
+
+class MyController extends Controller
+{
+    public function demo()
+    {
+        $Foo = new Foo;
+        echo $Foo->bar(); // 1
+    }
+}
+</code>
+</pre>
