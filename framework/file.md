@@ -9,69 +9,6 @@ Develop, run, store and access Twig code online - https://twigfiddle.com
 
 
 
-<p>
-
-### <a href="#-libraries"><img src="https://github.com/sciola-git/sciola-git.github.io/blob/main/images/icons/folder.svg?raw=true" width="60px" align="center" /></a> libraries
-
-</p>
-
-In this directory are the libraries of your application.
-
-##
-
-You can create your classes in this directory and call them anywhere in your application. Example:
-
-File: **Foo.php**
-
-```php
-<?php
-
-namespace Lib;
-
-class Foo
-{
-    public function bar()
-    {
-        return 1;
-    }
-}
-```
-
-Now just instantiate the class in the controller, model or other library. Example:
-
-```php
-<?php
-
-use Lib\Foo;
-
-class MyController extends Controller
-{
-    public function demo()
-    {
-        $Foo = new Foo;
-        echo $Foo->bar(); // 1
-    }
-}
-```
-
-or
-
-```php
-<?php
-
-use Lib\Foo;
-
-class MyModel extends Model
-{
-    public function demo()
-    {
-        $Foo = new Foo;
-        echo $Foo->bar(); // 1
-    }
-}
-```
-
-##
 
 <p>
 
