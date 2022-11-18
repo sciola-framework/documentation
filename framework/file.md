@@ -1,15 +1,3 @@
-### :arrow_right: Twig
-
-Twig Documentation - https://twig.symfony.com/doc/3.x/
-
-Develop, run, store and access Twig code online - https://twigfiddle.com
-
-
-
-
-
-
-
 <p>
 
 ### <a href="#-packages"><img src="https://github.com/sciola-git/sciola-git.github.io/blob/main/images/icons/folder.svg?raw=true" width="60px" align="center" /></a> packages
