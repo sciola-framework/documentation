@@ -261,28 +261,6 @@ Array
 
 <br>
 
-> ### Ajax
-> ---
-> 
-> Assign ajax via class:
-> 
-> ```html
-> <a class="ajax" href="/app-route"></a>
-> <form class="ajax" action="/app-route" return="my_function"></form>
-> 
-> <script>
-> function my_function(error, response) {
->     if (!error) {
->         console.log(response.data);
->     } else {
->         console.log(response);
->     }
-> }
-> </script>
-> ```
-
-<br>
-
 > ### CSS
 > ---
 > 
