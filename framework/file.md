@@ -224,29 +224,6 @@ Array
 ```
 
 
-
-<br>
-
-## Front-end
-
-<br>
-
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="/packages/sciola/css/all.min.css">
-    <script src="/packages/sciola/js/all.min.js"></script>
-    <script type="text/javascript">
-    const sciola = new Sciola();
-    sciola.init();
-    </script>
-  </head>
-  <body>
-  </body>
-</html>
-```
-
 <br>
 
 ## Twig
