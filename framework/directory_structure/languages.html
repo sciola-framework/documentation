@@ -6,7 +6,7 @@
   </a>
 </div>
 
-<p class="start">In this directory are the translation files of your application and the routes.</p>
+<p class="text-start">In this directory are the translation files of your application and the routes.</p>
 
 <div class="alert alert-primary text-wrap text-start p-4" role="alert">
   <h5><i class="fa-solid fa-circle-info me-2"></i><strong>Note</strong></h5>
@@ -14,7 +14,7 @@
   <p class="m-0 p-0">- The translated text must have the same ID in all translation files. Example:</p>
 </div>
 
-<h4>Text translation</h4>
+<h5 class="py-4">Text translation</h5>
 
 <pre class="text-start">
 File: en/app.json
@@ -38,27 +38,32 @@ File: pt-BR/app.json
 </code>
 </pre>
 
-<h4>Route translation</h4>
+<h5 class="py-4">Route translation</h5>
 
-File: **en/routes.json**
-
-```json
+<pre class="text-start">
+File: en/routes.json
+<code class="language-javascript">
 {
   "B0001" : "products-and-services",
   "B0002" : "virtual-store",
   "B0003" : "contact"
 }
-```
+</code>
+</pre>
 
-File: **pt-BR/routes.json**
-
-```json
+<pre class="text-start">
+File: pt-BR/routes.json
+<code class="language-javascript">
 {
   "B0001" : "produtos-e-servicos",
   "B0002" : "loja-virtual",
   "B0003" : "contato"
 }
-```
+</code>
+</pre>
+
+
+
 
 > **Note** *You will be able to rename the files and create others with custom names according to the context of your application. Example:*
 
