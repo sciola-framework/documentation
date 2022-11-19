@@ -48,17 +48,17 @@ Route::add('/form', function () {
     print_r($_REQUEST); // $_GET and $_POST
 });
 
-Route::add('/foo/(.*)', function ($var1) { // Required argument
-    echo $var1;
-});
+Route::add('/my-route/(.*)', function ($arg) { // (.*) Required argument
+    controller('MyController')->myMethod($arg);
+}); // http://localhost/my-route/test
 
-Route::add('/foo/?(.*)', function ($var1) { // Optional argument
-    echo $var1;
-});
+Route::add('/my-route/?(.*)', function ($arg) { // ?(.*) Optional argument
+    controller('MyController')->myMethod($arg);
+}); // http://localhost/my-route/test | http://localhost/my-route
 
-Route::add('/foo/([0-9]*)/bar', function ($var1) {
-    echo $var1;
-});
+Route::add('/my/([0-9]*)/route', function ($arg) {
+    controller('MyController')->myMethod($arg);
+}); // http://localhost/my/1/route
 
 Route::add('/user/(.*)/edit', function ($id) {
     echo $id;
