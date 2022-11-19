@@ -32,6 +32,10 @@ Route::add('/' . translate('my-route'), function () {
     controller('MyController')->myMethod();
 }); // http://localhost/my-route - http://localhost/minha-rota
 
+Route::add(translate('/my/route/(.*)'), function ($arg) {
+    controller('MyController')->myMethod($arg);
+}); // http://localhost/my/route/abc - http://localhost/minha/rota/abc
+
 Route::add('/this-route-is-defined', function () {
     controller('MyController')->myMethod('You need to patch this route to see this content');
 }, 'patch');
