@@ -1,0 +1,66 @@
+<div class="my-5">
+  <h1>Functions</h1>
+  <hr>
+  <a class="btn btn-primary border-0 shadow fs-5" href="javascript:history.back()">
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+  </a>
+</div>
+
+<pre class="text-start">
+Get base route
+<code class="language-twig">
+{{ base_route('/my/route') }}
+
+</code>
+</pre>
+
+<pre class="text-start">
+Message box
+<code class="language-twig">
+{{ box('Text...', 'Background color', 'Close button', 'CSS classes') }}
+
+{#
+  Background color:
+  primary | secondary | success | danger | warning | info | light | dark
+#}
+
+{# Close button: true | false #}
+
+{{ box('Text...', 'primary') }}
+{{ box('Text...', 'primary', true) }}
+{{ box('Text...', 'primary', true, 'm-2 p-2 shadow') }}
+
+</code>
+</pre>
+
+<pre class="text-start">
+Language list
+<code class="language-twig">
+{{ language_list() }}
+
+</code>
+</pre>
+
+<pre class="text-start">
+.md file interpreter
+<code class="language-twig">
+{{ parsedown('/path/to/file.md')|raw }}
+
+</code>
+</pre>
+
+<pre class="text-start">
+Get session
+<code class="language-twig">
+{{ session('name') }}
+
+</code>
+</pre>
+
+<pre class="text-start">
+Text translation
+<code class="language-twig">
+{{ translate('Text...') }}
+
+</code>
+</pre>
