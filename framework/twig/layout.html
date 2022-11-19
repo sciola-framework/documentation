@@ -1,0 +1,160 @@
+<div class="my-5">
+  <h1>Layout</h1>
+  <hr>
+  <a class="btn btn-primary border-0 shadow fs-5" href="javascript:history.back()">
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+  </a>
+</div>
+
+<h5 class="text-start">Include header</h5>
+
+<pre class="text-start">
+Example 1
+<code class="language-twig">
+{% include header %}
+
+</code>
+</pre>
+
+<pre class="text-start">
+Example 2
+<code class="language-twig">
+{% include header with {
+    meta: {
+      title: '',
+      description: '',
+      keywords: ''
+    }
+  }
+%}
+
+</code>
+</pre>
+
+<pre class="text-start">
+Example 3
+<code class="language-twig">
+{% include header with {
+    meta: {
+      title: '',
+      description: '',
+      keywords: ''
+    },
+    css: ['/packages/pack-1/style.min.css',
+          '/packages/pack-2/style.min.css',
+          '/packages/pack-3/style.min.css']
+  }
+%}
+
+</code>
+</pre>
+
+<pre class="text-start">
+Example 4
+<code class="language-twig">
+{% include header with {
+    meta: {
+      title: '',
+      description: '',
+      keywords: ''
+    },
+    css: ['/packages/pack-1/style.min.css',
+          '/packages/pack-2/style.min.css',
+          '/packages/pack-3/style.min.css'],
+    js:  ['/packages/pack-1/script.min.js',
+          '/packages/pack-2/script.min.js',
+          '/packages/pack-3/script.min.js']
+  }
+%}
+
+</code>
+</pre>
+
+<pre class="text-start">
+Example 5
+<code class="language-twig">
+{% include header with {
+    meta: {
+      title: translate('My title')
+    }
+%}
+
+</code>
+</pre>
+
+<h5 class="text-start">Include navbar</h5>
+
+<pre class="text-start">
+Example 1
+<code class="language-twig">
+<html>
+  <head>
+  </head>
+  <body>
+    <header>
+      {{ include('Layout/navbar.html') }}
+    </header>
+    <main>
+    </main>
+  </body>
+</html>
+
+</code>
+</pre>
+
+<pre class="text-start">
+Example 2
+<code class="language-twig">
+<html>
+  <head>
+  </head>
+  <body>
+    <header>
+      {{ auth.login ? include('Layout/restricted_navbar.html') : include('Layout/navbar.html') }}
+    </header>
+    <main>
+    </main>
+  </body>
+</html>
+
+</code>
+</pre>
+
+<h5 class="text-start">Include footer</h5>
+
+<pre class="text-start">
+Example 1
+<code class="language-twig">
+{% include footer %}
+
+</code>
+</pre>
+
+<pre class="text-start">
+Example 2
+<code class="language-twig">
+{% include footer with {
+    js: ['/packages/pack-1/script.min.js',
+         '/packages/pack-2/script.min.js',
+         '/packages/pack-3/script.min.js']
+  }
+%}
+
+</code>
+</pre>
+
+<pre class="text-start">
+Example 3
+<code class="language-twig">
+{% include footer with {
+    css: ['/packages/pack-1/style.min.css',
+          '/packages/pack-2/style.min.css',
+          '/packages/pack-3/style.min.css'],
+    js:  ['/packages/pack-1/script.min.js',
+          '/packages/pack-2/script.min.js',
+          '/packages/pack-3/script.min.js']
+  }
+%}
+
+</code>
+</pre>
