@@ -6,7 +6,7 @@
   </a>
 </div>
 
-<h5 class="text-start">Include header</h5>
+<h5 class="text-start mb-4">Include header</h5>
 
 <pre class="text-start">
 Example 1
@@ -82,22 +82,22 @@ Example 5
 </code>
 </pre>
 
-<h5 class="text-start">Include navbar</h5>
+<h5 class="text-start mb-4">Include navbar</h5>
 
 <pre class="text-start">
 Example 1
 <code class="language-twig">
-<html>
-  <head>
-  </head>
-  <body>
-    <header>
+&lt;html>
+  &lt;head>
+  &lt;/head>
+  &lt;body>
+    &lt;header>
       {{ include('Layout/navbar.html') }}
-    </header>
-    <main>
-    </main>
-  </body>
-</html>
+    &lt;/header>
+    &lt;main>
+    &lt;/main>
+  &lt;/body>
+&lt;/html>
 
 </code>
 </pre>
@@ -105,22 +105,22 @@ Example 1
 <pre class="text-start">
 Example 2
 <code class="language-twig">
-<html>
-  <head>
-  </head>
-  <body>
-    <header>
+&lt;html>
+  &lt;head>
+  &lt;/head>
+  &lt;body>
+    &lt;header>
       {{ auth.login ? include('Layout/restricted_navbar.html') : include('Layout/navbar.html') }}
-    </header>
-    <main>
-    </main>
-  </body>
-</html>
+    &lt;/header>
+    &lt;main>
+    &lt;/main>
+  &lt;/body>
+&lt;/html>
 
 </code>
 </pre>
 
-<h5 class="text-start">Include footer</h5>
+<h5 class="text-start mb-4">Include footer</h5>
 
 <pre class="text-start">
 Example 1
