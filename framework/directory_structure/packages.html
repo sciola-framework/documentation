@@ -5,3 +5,36 @@
     <i class="fa fa-arrow-left" aria-hidden="true"></i>
   </a>
 </div>
+
+<p class="text-start">In this directory are the packages managed by <a href="https://getcomposer.org/">composer</a> and <a href="https://www.npmjs.com/">npm</a>.</p>
+
+<div class="alert alert-primary text-wrap text-start p-4" role="alert">
+  <h5><i class="fa-solid fa-circle-info me-2"></i><strong>Note</strong></h5>
+  <p class="m-0 p-0">You can configure public packages, with access via url.</p>
+</div>
+
+<pre class="text-start">
+File: package.json
+<code class="language-javascript">
+{
+  "dependencies": {
+
+  },
+  "public": {
+    "my-package-1": "my-package-1/dist",
+    "my-package-2": "my-package-2/dist"
+  }
+}
+
+</code>
+</pre>
+
+<pre class="text-start">
+  Access URL:
+
+  http://localhost/packages/my-package-1/css/all.min.css
+  http://localhost/packages/my-package-1/js/all.min.js
+
+  http://localhost/packages/my-package-2/css/all.min.css
+  http://localhost/packages/my-package-2/js/all.min.js
+</pre>
