@@ -10,27 +10,27 @@
 <p class="text-start">Route is the path (URL) and are responsible for calling the controllers.</p>
 
 <pre class="text-start">
-Example:
-<code class="language-php">
-&lt;?php
-
-use Sciola\Route;
-
-Route::add('/my/route', function () {
-    controller('MyController')->myMethod();
-});
-
-// http://localhost/my/route
-
-</code>
-</pre>
-
-<pre class="text-start">
 Examples:
 <code class="language-php">
 &lt;?php
 
 use Sciola\Route;
+
+Route::add('/', function () {
+    controller('MyController')->myMethod();
+}); // http://localhost
+
+Route::add('/my-route', function () {
+    controller('MyController')->myMethod();
+}); // http://localhost/my-route
+
+Route::add('/my/route', function () {
+    controller('MyController')->myMethod();
+}); // http://localhost/my/route
+
+Route::add('/' . translate('my-route'), function () {
+    controller('MyController')->myMethod();
+}); // http://localhost/my-route - http://localhost/minha-rota
 
 Route::add('/this-route-is-defined', function () {
     echo 'You need to patch this route to see this content';
@@ -75,25 +75,3 @@ Route::add('/(.*)/(.*)/(.*)/(.*)', function ($var1,$var2,$var3,$var4) {
   <h5><i class="fa-solid fa-circle-info me-2"></i><strong>Note</strong></h5>
   <p class="m-0 p-0">You can create multiple route files as per your application's organizational structure.</p>
 </div>
-
-<pre class="text-start">
-File: my_routes.php
-<code class="language-php">
-&lt;?php
-
-use Sciola\Route;
-
-Route::add('/', function () {
-    controller('MyController')->myMethod();
-});
-
-Route::add('/my-route', function () {
-    controller('MyController')->myMethod('args');
-});
-
-Route::add('/' . translate('my-route'), function () {
-    controller('MyController')->myMethod('args');
-});
-
-</code>
-</pre>
