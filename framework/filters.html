@@ -10,26 +10,32 @@
 Date format - Required extension: php-intl
 <code class="language-twig">
 {{ '2022-11-02' | datef }}
-</code>
+
 Output [en]:
 November 2, 2022
 
 Output [pt-BR]:
 2 de novembro de 2022
+
+</code>
 </pre>
 
 <pre class="text-start">
 Remove accent
 <code class="language-twig">
 {{ 'ÁÉÍóú são àçô' | remove_accent }}
-</code>
+
 Output: AEIou sao aco
+
+</code>
 </pre>
 
 <pre class="text-start">
 Format route
 <code class="language-twig">
 {{ 'ÁÉÍóú são àçô' | route }}
-</code>
+
 Output: aeiou-sao-aco
+
+</code>
 </pre>
