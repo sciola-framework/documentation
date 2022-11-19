@@ -33,19 +33,19 @@ Route::add('/' . translate('my-route'), function () {
 }); // http://localhost/my-route - http://localhost/minha-rota
 
 Route::add('/this-route-is-defined', function () {
-    echo 'You need to patch this route to see this content';
+    controller('MyController')->myMethod('You need to patch this route to see this content');
 }, 'patch');
 
-Route::add('/form', function () {
-    print_r($_GET);
+Route::add('/my-route', function () {
+    controller('MyController')->myMethod($_GET);
 }, 'get');
 
-Route::add('/form', function () {
-    print_r($_POST);
+Route::add('/my-route', function () {
+    controller('MyController')->myMethod($_POST);
 }, 'post');
 
-Route::add('/form', function () {
-    print_r($_REQUEST); // $_GET and $_POST
+Route::add('/my-route', function () {
+    controller('MyController')->myMethod($_REQUEST); // $_GET and $_POST
 });
 
 Route::add('/my-route/(.*)', function ($arg) { // (.*) Required argument
@@ -60,9 +60,9 @@ Route::add('/my/([0-9]*)/route', function ($arg) {
     controller('MyController')->myMethod($arg);
 }); // http://localhost/my/1/route
 
-Route::add('/user/(.*)/edit', function ($id) {
-    echo $id;
-});
+Route::add('/user/(.*)/edit', function ($arg) {
+    controller('MyController')->myMethod($arg);
+}); // http://localhost/my/string/route | http://localhost/my/integer/route
 
 Route::add('/(.*)/(.*)/(.*)/(.*)', function ($var1,$var2,$var3,$var4) {
     echo 'This is the first match: ', $var1.' / '.$var2.' / '.$var3.' / '.$var4;
