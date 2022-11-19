@@ -42,7 +42,7 @@ Route::add('/my-route', function () {
 
 Route::add('/my-route', function () {
     controller('MyController')->myMethod($_POST);
-}, 'post'); // <form action="http://localhost/my-route" method="POST"></form>
+}, 'post'); // &lt;form action="http://localhost/my-route" method="POST">&lt;/form>
 
 Route::add('/my-route', function () {
     controller('MyController')->myMethod($_REQUEST); // $_GET and $_POST
