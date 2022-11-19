@@ -1,43 +1,5 @@
 <p>
 
-### <a href="#-packages"><img src="https://github.com/sciola-git/sciola-git.github.io/blob/main/images/icons/folder.svg?raw=true" width="60px" align="center" /></a> packages
-
-</p>
-
-In this directory are the packages managed by [composer](https://getcomposer.org) and [npm](https://www.npmjs.com).
-
-##
-
-> **Note** *You can configure public packages, with access via url.*
-
-File: **package.json**
-
-```json
-{
-  "dependencies": {
-
-  },
-  "public": {
-    "my-package-1": "my-package-1/dist",
-    "my-package-2": "my-package-2/dist"
-  }
-}
-```
-
-```
-Access URL:
-
-http://localhost/packages/my-package-1/css/all.min.css
-http://localhost/packages/my-package-1/js/all.min.js
-
-http://localhost/packages/my-package-2/css/all.min.css
-http://localhost/packages/my-package-2/js/all.min.js
-```
-
-##
-
-<p>
-
 ### <a href="#-routes"><img src="https://github.com/sciola-git/sciola-git.github.io/blob/main/images/icons/folder.svg?raw=true" width="60px" align="center" /></a> routes
 
 </p>
