@@ -1,0 +1,35 @@
+<div class="my-5">
+  <h1>Filters</h1>
+  <hr>
+  <a class="btn btn-primary border-0 shadow fs-5" href="javascript:history.back()">
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+  </a>
+</div>
+
+<pre class="text-start">
+Date format - Required extension: php-intl
+<code class="language-twig">
+{{ '2022-11-02' | datef }}
+</code>
+Output [en]:
+November 2, 2022
+
+Output [pt-BR]:
+2 de novembro de 2022
+</pre>
+
+<pre class="text-start">
+Remove accent
+<code class="language-twig">
+{{ 'ÁÉÍóú são àçô' | remove_accent }}
+</code>
+Output: AEIou sao aco
+</pre>
+
+<pre class="text-start">
+Format route
+<code class="language-twig">
+{{ 'ÁÉÍóú são àçô' | route }}
+</code>
+Output: aeiou-sao-aco
+</pre>
