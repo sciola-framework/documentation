@@ -1,10 +1,12 @@
 <div class="my-5">
-  <h1>ORM - Demo</h1>
+  <h1>ORM</h1>
   <hr>
   <a class="btn btn-primary border-0 shadow fs-5" href="javascript:history.back()">
     <i class="fa fa-arrow-left" aria-hidden="true"></i>
   </a>
 </div>
+
+<h2>Example</h2>
 
 <pre class="text-start">
 File: layers/Controllers/<strong>MyController.php</strong>
@@ -80,5 +82,18 @@ File: layers/Views/<strong>demo.html</strong>
 {% for data in arr %}
 &lt;p>{{ data.name }}&lt;/p>
 {% endfor %}
+</code>
+</pre>
+
+<pre class="text-start">
+File: routes/<strong>index.php</strong>
+<code class="language-php">
+&lt;?php
+
+use Sciola\Route;
+
+Route::add('/orm', function () {
+    controller('MyController')->demo();
+});
 </code>
 </pre>
