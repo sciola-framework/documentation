@@ -10,6 +10,7 @@ class MyController extends Controller
     {
         $model = model('MyModel');
         $model->insert('Foo');
-        return view('demo', $model->select());
+        $data['arr'] = $model->select();
+        return view('demo', $data);
     }
 }
