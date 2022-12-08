@@ -1,0 +1,75 @@
+<div class="my-5">
+  <h1>ORM - Demo</h1>
+  <hr>
+  <a class="btn btn-primary border-0 shadow fs-5" href="javascript:history.back()">
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+  </a>
+</div>
+
+<pre class="text-start">
+<strong>MyController.php</strong>
+<code class="language-php">
+&lt;?php
+
+namespace Layers\Controllers;
+
+use Sciola\Controller;
+
+class MyController extends Controller
+{
+    public function demo()
+    {
+        $model = model('MyModel');
+        $model->insert('Foo');
+        $data['arr'] = $model->select();
+        return view('demo', $data);
+    }
+}
+</code>
+</pre>
+
+<pre class="text-start">
+<strong>MyModel.php</strong>
+<code class="language-php">
+&lt;?php
+
+namespace Layers\Models;
+
+use Sciola\Model;
+
+class MyModel extends Model
+{
+    private $orm = null;
+
+    public function __construct()
+    {
+        $this->orm = $this->orm();
+
+        $this->orm->create('demo', [
+            'id' => [
+            'INT',
+            'NOT NULL',
+            'PRIMARY KEY'
+          ],
+            'name' => [
+            'VARCHAR(30)',
+            'NOT NULL'
+          ]
+        ]);
+    }
+
+    public function insert($name)
+    {
+        $this->orm->insert('demo', [
+          'id' => sizeof($this->orm->select('demo', ['id'])) + 1,
+          'name' => $name
+        ]);
+    }
+
+    public function select()
+    {
+        return $this->orm->select('demo', ['name']);
+    }
+}
+</code>
+</pre>
