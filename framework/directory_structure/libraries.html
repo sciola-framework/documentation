@@ -15,7 +15,7 @@ File: Foo.php
 <code class="language-php">
 &lt;?php
 
-namespace Lib;
+namespace App\Lib;
 
 class Foo
 {
@@ -33,10 +33,10 @@ class Foo
 <code class="language-php">
 &lt;?php
 
-namespace Layers\Controllers;
+namespace App\Controller;
 
 use Sciola\Controller;
-use Lib\Foo;
+use App\Lib\Foo;
 
 class MyController extends Controller
 {
@@ -55,10 +55,10 @@ class MyController extends Controller
 <code class="language-php">
 &lt;?php
 
-namespace Layers\Models;
+namespace App\Model;
 
 use Sciola\Model;
-use Lib\Foo;
+use App\Lib\Foo;
 
 class MyModel extends Model
 {
